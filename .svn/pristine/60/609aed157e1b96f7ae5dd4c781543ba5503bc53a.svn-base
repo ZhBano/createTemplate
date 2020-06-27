@@ -1,0 +1,50 @@
+
+function cretaInitData(data){
+    console.log(data,'data')
+    return (
+        `
+        import request from '@/utils/request'
+        
+        // 获取列表
+        export function getLsit(query) {
+          return request({
+            url: '${data.path}',
+            method: 'post',
+            params: query
+          })
+        }
+
+        // 新增行
+        export function addRow(query) {
+          return request({
+            url: '${data.path}',
+            method: 'post',
+            params: query
+          })
+        }
+
+        // 修改行
+        export function updataRow(query) {
+          return request({
+            url: '${data.path}',
+            method: 'post',
+            params: query
+          })
+        }
+
+        // 删除行
+        export function deleteRow(query) {
+          return request({
+            url: '${data.path}',
+            method: 'post',
+            params: query
+          })
+        }
+
+       
+        `
+    )
+
+}
+
+module.exports={cretaInitData}
